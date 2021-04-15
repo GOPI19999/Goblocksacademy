@@ -1,0 +1,326 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> LCM and  HCF </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="apt_train.html" target="_parent" class=" "> Problems on train </a></li>
+<li><a href="apt_hcf_lcm.html" target="_parent" class=" ">HCF and LCM</a></li>
+<li><a href="apt_time.html" target="_parent" class=" "> Time and distance </a></li>
+
+
+<li><a href="apt_boats.html" target="_parent" class=" ">Boats and Stream</a></li>
+<li><a href="apt_age.html" target="_parent" class=" ">Problems on age</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn"> 
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 280px  20px 0px;">HCF and LCM </th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td> 
+</tr>
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.Find the greatest number that will divide 43, 91 and 183 so as to leave the same remainder in each case.	
+ 
+</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona"> 4 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb"> 7  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc">  9 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">13 </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optiona','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>Required number = H.C.F. of (91 - 43), (183 - 91) and (183 - 43)
+
+     = H.C.F. of 48, 92 and 140 = 4.
+ </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.	
+The H.C.F. of two numbers is 23 and the other two factors of their L.C.M. are 13 and 14. The larger of the two numbers is:	
+</td> 
+</tr>
+
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">276  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">299  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc"> 322  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond"> 345 </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optionc','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option C is the correct answer.<br>Clearly, the numbers are (23 x 13) and (23 x 14).
+
+ Larger number = (23 x 14) = 322.
+
+
+</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.Six bells commence tolling together and toll at intervals of 2, 4, 6, 8 10 and 12 seconds respectively. In 30 minutes, how many times do they toll together ?</td> 
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb"> 4	</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">10  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">15 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond"> 16  </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optiond','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br> L.C.M. of 2, 4, 6, 8, 10, 12 is 120.
+
+So, the bells will toll together after every 120 seconds(2 minutes).<br>
+
+In 30 minutes, they will toll together	30/2  + 1 = 16 times.
+</p>
+</details>
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.Let N be the greatest number that will divide 1305, 4665 and 6905, leaving the same remainder in each case. Then sum of the digits in N is:</td> 
+</tr>
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb">4</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">5</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">6</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">8</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optiona','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>N = H.C.F. of (4665 - 1305), (6905 - 4665) and (6905 - 1305)
+
+  = H.C.F. of 3360, 2240 and 5600 = 1120.
+
+Sum of digits in N = ( 1 + 1 + 2 + 0 ) = 4</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.The greatest number of four digits which is divisible by 15, 25, 40 and 75 is:</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">9000</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">9400</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">9600</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond"> 9800</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optionc','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>Greatest number of 4-digits is 9999.
+
+L.C.M. of 15, 25, 40 and 75 is 600.
+
+On dividing 9999 by 600, the remainder is 399.
+
+ Required number (9999 - 399) = 9600. </p> </details>
+<hr> 
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,372 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> Time </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="apt_train.html" target="_parent" class=" "> Problems on train </a></li>
+<li><a href="apt_hcf_lcm.html" target="_parent" class=" ">HCF and LCM</a></li>
+<li><a href="apt_time.html" target="_parent" class=" "> Time and distance </a></li>
+
+
+<li><a href="apt_boats.html" target="_parent" class=" ">Boats and Stream</a></li>
+<li><a href="apt_age.html" target="_parent" class=" ">Problems on age</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn">
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 160px  20px 0px;">Time and Distance </th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td> 
+</tr>
+
+
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.A person crosses a 600 m long street in 5 minutes. What is his speed in km per hour?	
+ 
+</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">3.6  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb"> 7.2  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc"> 8.4  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond"> 10</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optionb','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>Speed =600 / (5 x 60)m/sec.<br>
+
+   = 2 m/sec.<br>
+
+Converting m/sec to km/hr (see important formulas section)
+
+   = 2 x 18/5	km/hr 
+   = 7.2 km/hr
+
+ </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.If a person walks at 14 km/hr instead of 10 km/hr, he would have walked 20 km more. The actual distance travelled by him is:	
+</td> 
+</tr>
+
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">50 km  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">56 km  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc"> 70 km  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">80 km  </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optiona','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option A is the correct answer.<br>
+
+Let the actual distance travelled be x km.
+
+Then,	x/10	=	(x + 20)/14 <br>
+ 14x = 10x + 200 <br>
+
+ 4x = 200<br>
+
+ x = 50 km.
+</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.	
+Excluding stoppages, the speed of a bus is 54 kmph and including stoppages, it is 45 kmph. For how many minutes does the bus stop per hour?</td> 
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb">9</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb"> 10 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc"> 20</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond">  12 </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optionb','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>
+<p> 
+
+Due to stoppages, it covers 9 km less.
+
+Time taken to cover 9 km = 9 x 60/54 min = 10 min.
+
+</p>  
+</details>
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.	
+The ratio between the speeds of two trains is 7 : 8. If the second train runs 400 km in 4 hours, then the speed of the first train is:</td> 
+</tr>
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb"> 70 km/hr</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">75 km/hr</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc"> 84 km/hr</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond"> 87.5 km/hr</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optiond','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br>
+
+
+
+Let the speed of two trains be 7x and 8x km/hr.
+
+Then, 8x = 400/4= 100
+
+ x = 100/8= 12.5
+
+ Speed of first train = (7 x 12.5) km/hr = 87.5 km/hr.
+
+
+
+
+
+
+
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.In covering a distance of 30 km, Abhay takes 2 hours more than Sameer. If Abhay doubles his speed, then he would take 1 hour less than Sameer. Abhay's speed is:</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">5 kmph</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">6 kmph</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">6.25 kmph</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond">7.5 kmph </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optiona','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br> 
+
+
+
+
+Let Abhay's speed be x km/hr.
+
+Then,	30/x - 30/2x	= 3
+
+ 6x = 30
+
+ x = 5 km/hr.
+
+
+
+
+
+
+
+
+
+
+</p> </details>
+<hr> 
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

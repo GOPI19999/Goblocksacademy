@@ -1,0 +1,568 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> C Pointer </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="c_pro_mcq.html" target="_parent" class=" ">  Variables</a></li>
+<li><a href="c_control_flow.html" target="_parent" class=" "> Control flow </a></li>
+<li><a href="c_expressions.html" target="_parent" class=" "> Expressions </a></li>
+
+<li><details class="nav_det">
+<summary>Functions</summary>
+<li><a href="c_value.html" target="_parent" class=" ">call by value</a></li>
+<li><a href="c_reference.html" target="_parent" class=" ">call by reference</a></li>
+<li><a href="c_recursion.html" target="_parent" class=" ">recursion</a></li> 
+
+</details>
+</li>
+
+<li><details class="nav_det">
+<summary>Array</summary>
+<li><a href="c_1d.html " target="_parent" class="">1D array</a></li>
+<li><a href="c_2d.html" target="_parent" class="">2D array</a></li>
+
+</details>
+</li>
+
+<li><a href="c_pointer.html" target="_parent" class=" ">Pointers</a></li>
+<li><a href="c_string.html" target="_parent" class=" ">Strings</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn">
+<tr> 
+<th style="font-size:35px;  text-decoration:underline; padding:20px 0px  20px  160px;">Pointers</th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td>
+</tr>
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.What will be the output of the folllowing program ?</td> 
+</tr>
+<tr>
+<td>
+<pre> 
+#include&lt;stdio.h&gt;
+power(int**);
+int main()
+{
+    int a=5, *aa; /* Address of 'a' is 1000 */
+    aa = &a;
+    a = power(&aa);
+    printf("%d\n", a);
+    return 0;
+}
+power(int **ptr)
+{
+    int b;
+    b = **ptr***ptr;
+    return (b);
+}
+
+</pre>
+</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"> 5  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb"> 25 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc"> 125 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">   Garbage value</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optionb','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>Option A: assignment statements are always return in paranthesis in the case of conditional operator. It should be a>b? (c=30):(c=40);
+
+Option B: it is syntatically wrong.
+
+Option D: syntatically wrong, it should be return(a>b ? a:b);
+
+Option C: it uses nested conditional operator, this is logic for finding greatest number out of three numbers. </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.What will be the output of the following program ?</td> 
+</tr>
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    char *p;
+    p="hello";
+    printf("%s\n", *&*&p);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">llo</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">hello</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc">ello</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">h</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optionb','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option B is the correct answer.<br>see
+p=&(*p);<br>
+*p=*&(*p);<br>
+so it will print *p;<br>
+actually *p is value and &(*p) is adress of value of p i.e nothing but p itself (base adress).<br>
+so now *(&*p) is nothing but he is asking about the value of p
+thats it</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    char str[20] = "Hello";
+    char *const p=str;
+    *p='M';
+    printf("%s\n", str);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optiona">Mello	</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">Hello </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">HMello </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond"> MHello  </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optiona','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>
+H][e][l][l][o][w]
+10 11 12 13 14 15 (Assume these are address of memory)
+here,str=10
+
+char*const p=str (here,p will store 10 that is constant)
+
+so,now *p indicate "H" that has replaced by "M"
+
+note: Base address also is a pointer & constant.
+
+
+
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.what would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    static char *s[] = {"black", "white", "pink", "violet"};
+    char **ptr[] = {s+3, s+2, s+1, s}, ***p;
+    p = ptr;
+    ++p;
+    printf("%s", **p+1);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb">let</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">ite</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">ink</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">ack</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optionc','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>
+<pre>
+s is a character pointer
+s[0]=black and ptr[0]=violet
+s[1]=white ptr[1]=pink
+s[2]=pink ptr[2]=white
+s[3]=violet ptr[3]=black
+
+here p=ptr means p,ptr represents same address
+++p means ++ptr = pink
+++p+1 means ink
+</pre>
+
+
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.What would be the equivalent pointer expression for referring the array element a[i][j][k][l]</td> 
+</tr>
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">((a+i)+j+k+l) </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb"> (((a+i)+j)+k+l)</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">*(*(*(*(a+i)+j)+k)+l) </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond"> ((((a+i)+j)+k)+l) </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optionc','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>
+
+a[2] can be wriiten as *(a+2) 
+a[2][2] -> *(*(a+2)+2)
+a[2}[2][2] -> *(*(*(a+2)+2)+2)
+
+</p> </details>
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >6. What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+char *p;
+p = (char*) malloc(100);
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q6optiona" name="q6"><label for="q6optiona">char p = *malloc(100);</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q6optionb" name="q6"><label for="q6optionb">char *p = (char) malloc(100);</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q6optionc" name="q6"><label for="q6optionc">char *p = (char*)malloc(100);</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q6optiond" name="q6"><label for="q6optiond">char *p = (char *)(malloc*)(100);</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q6optionc','res6')" >check</button>
+<p id="res6"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option A is the correct answer.<br>
+Here we have to allocate space for characters.so first we have to do typecasting i.e (char *).
+If we give (char) it gives error because we are using pointer, then we allocate memory space by malloc()</p> </details>
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >7.What is (void*)0?</td> 
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q7optiona" name="q7"><label for="q7optiona">Representation of NULL pointer</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q7optionb" name="q7"><label for="q7optionb">Representation of void pointer</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q7optionc" name="q6"><label for="q7optionc">Error</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q7optiond" name="q7"><label for="q7optiond">None of above</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q7optiona','res7')" >check</button>
+<p id="res7"></p>
+
+<details class="exp"> <summary>Explanation </summary> Option A is the correct answer.<br>void(*) measns void pointer,it means value is not given or void..
+but void(*0)means it point to null value(i.e 0)..therefore null pointer.
+</p> </details>
+<hr>
+
+
+
+
+
+
+ </form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

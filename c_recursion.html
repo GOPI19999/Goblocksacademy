@@ -1,0 +1,547 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> C Recursion </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="c_pro_mcq.html" target="_parent" class=" ">  Variables</a></li>
+<li><a href="c_control_flow.html" target="_parent" class=" "> Control flow </a></li>
+<li><a href="c_expressions.html" target="_parent" class=" "> Expressions </a></li>
+
+<li><details class="nav_det">
+<summary>Functions</summary>
+<li><a href="c_value.html" target="_parent" class=" ">call by value</a></li>
+<li><a href="c_reference.html" target="_parent" class=" ">call by reference</a></li>
+<li><a href="c_recursion.html" target="_parent" class=" ">recursion</a></li> 
+
+</details>
+</li>
+
+<li><details class="nav_det">
+<summary>Array</summary>
+<li><a href="c_1d.html " target="_parent" class="">1D array</a></li>
+<li><a href="c_2d.html" target="_parent" class="">2D array</a></li>
+
+</details>
+</li>
+
+<li><a href="c_pointer.html" target="_parent" class=" ">Pointers</a></li>
+<li><a href="c_string.html" target="_parent" class=" ">Strings</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn">
+<tr> 
+
+<th style="font-size:35px;  text-decoration:underline; padding:20px 0px  20px  160px;">Recursion</th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  0px 0px;">Choose the best answer :</td> 
+</tr>
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.What will be the output of the following program ?</td> 
+</tr> 
+<tr> 
+<td>
+<pre> 
+#include&lt;stdio.h&gt;
+void fun(int);
+typedef int (*pf) (int, int);
+int proc(pf, int, int);
+
+int main()
+{
+    int a=3;
+    fun(a);
+    return 0;
+}
+void fun(int n)
+{
+    if(n > 0)
+    {
+        fun(--n);
+        printf("%d,", n);
+        fun(--n);
+    }
+}
+
+
+</pre></td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">0, 2, 1, 0,</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb">1, 1, 2, 0,</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc">0, 1, 0, 2,</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">0, 1, 2, 0,</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optiond','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>
+// typedef int (*pf) (int, int);
+// int proc(pf, int, int);
+
+The above two statement has no effects , because they are not used in main or sub function.
+
+Function calls are stored in stack, that is LAST IN FIRST OUT.
+
+1.fun(a=3)---calling sub function--->fun(n=3).<br>
+2.fun(3)->if(3>0)true{fun(2)-->step 3,print(n),fun(--n)//active}<br>
+3.fun(2)->if(2>0)true{fun(1)-->step 4,print(n),fun(--n)//active}<br>
+4.fun(1)->if(1>0)true{fun(0)-->step 5,print(n),fun(--n)//active}<br>
+5.fun(0)->if(0>0)false;<br>
+6.From step 4,{fun(n=0)//finished,PRINT(n=0),fun(-1)-->step 7}<br>
+7.fun(-1)->if(-1>0)false;<br>
+8.From step 3,{fun(n=1)//finished,PRINT(n=1),fun(0)-->step 9}<br>
+9.fun(0)->if(0>0)false;<br>
+10.From step 2,{fun(n=2)//finished,PRINT(n=2),fun(1)-->step 11}<br>
+11.fun(1)->if(1>0)true{fun(0)->step 12,print(n),fun(--n)//acti}<br>
+12.fun(0)->if(0>0)false;<br>
+13.From 11,{fun(n=0)//finished,PRINT(0),fun(-1)-->step 14}<br>
+14.fun(-1)->if(-1>0)false;<br>
+
+// all active calls are called and removed from stack.<br>
+// here 'n' is a local variable for each function.<br>
+// The printing statements are capitalized<br>
+
+PRINT(n=0),PRINT(n=1),PRINT(n=2),PRINT(n=0).<br>
+ </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.What would be the output of the following program ?</td> 
+</tr>
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+int main()
+{
+    int i=1;
+    if(!i)
+        printf("Gopi,");
+    else
+    {
+        i=0;
+        printf("C-Program");
+        main();
+    }
+    return 0;
+}
+
+
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">prints "Gopi, C-Program" infinitely</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">prints "C-Program" infinetly</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc">prints "C-Program, Gopi," infinitely</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">Error: main() should not inside else statement</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optionb','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option C is the correct answer.<br>Step 1: int i=1; The variable i is declared as an integer type and initialized to 1(one).
+
+<br>Step 2: if(!i) Here the !(NOT) operator reverts the i value 1 to 0. Hence the if(0) condition fails. So it goes to else part.
+
+<br>Step 3: else { i=0; In the else part variable i is assigned to value 0(zero).
+
+<br>Step 4: printf("C-Program"); It prints the "C-program".
+
+<br>Step 5: main(); Here we are calling the main() function.
+
+<br>After calling the function, the program repeats from step 1 to step 5 infinitely.
+
+<br>Hence it prints "C-Program" infinitely.</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+
+int main()
+{
+    int i=0;
+    i++;
+    if(i<=5)
+    {
+        printf("Gopi");
+        exit(1);
+        main();
+    }
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optiona">Function main() doesn't calls itself	</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">Prints "Gopi" 5 times</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">Prints "Gopi"</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond">  Infinite loop</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optionc','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>Intially i=0 and then i=1(i++)
+if condition satisifies a, prints Gopi and exit(1) ends the program so main() doesn't  make call.</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.what would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+int sumdig(int);
+int main()
+{
+    int a, b;
+    a = sumdig(123);
+    b = sumdig(123);
+    printf("%d, %d\n", a, b);
+    return 0;
+}
+int sumdig(int n)
+{
+    int s, d;
+    if(n!=0)
+    {
+        d = n%10;
+        n = n/10;
+        s = d+sumdig(n);
+    }
+    else
+        return 0;
+    return s;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb">4, 4</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">3,3</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">6,6</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">12,12</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optionc','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br></p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+int reverse(int);
+
+int main()
+{
+    int no=5;
+    reverse(no);
+    return 0;
+}
+int reverse(int no)
+{
+    if(no == 0)
+        return 0;
+    else
+        printf("%d,", no);
+    reverse (no--);
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optiona">Print 5, 4, 3, 2, 1</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">Print 1, 2, 3, 4, 5</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">Print 5, 4, 3, 2, 1, 0</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond"> Infinite loop </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optiond','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br> reverse(no); becomes reverse(5); It calls the function reverse() with '5' as parameter.
+
+The function reverse accept an integer number 5 and it returns '0'(zero) if(5 == 0) if the given number is '0'(zero) or else printf("%d,", no); it prints that number 5 and calls the function reverse(5);.
+
+The function runs infinetely because the there is a post-decrement operator is used. It will not decrease the value of 'n' before calling the reverse() function. So, it calls reverse(5) infinitely.
+
+Note: If we use pre-decrement operator like reverse(--n), then the output will be 5, 4, 3, 2, 1. Because before calling the function, it decrements the value of 'n'.
+</p> </details>
+<hr> 
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >7.What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+int main()
+{
+    printf("Gopi");
+    main();
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q6optiona" name="q6"><label for="q6optiona">Infinite times</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q6optionb" name="q6"><label for="q6optionb">65535</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q6optionc" name="q6"><label for="q6optionc">Till stack overflows</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q6optiond" name="q6"><label for="q6optiond">32767</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q6optionc','res6')" >check</button>
+<p id="res6"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option C is the correct answer .<br>A stack overflow occurs when too much memory is used on the call stack.
+
+Here function main() is called repeatedly and its return address is stored in the stack. After stack memory is full. It shows stack overflow error..</p> </details>
+<hr>
+
+
+
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

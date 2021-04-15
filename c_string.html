@@ -1,0 +1,444 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> C MCQ </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="c_pro_mcq.html" target="_parent" class=" ">  Variables</a></li>
+<li><a href="c_control_flow.html" target="_parent" class=" "> Control flow </a></li>
+<li><a href="c_expressions.html" target="_parent" class=" "> Expressions </a></li>
+
+<li><details class="nav_det">
+<summary>Functions</summary>
+<li><a href="c_value.html" target="_parent" class=" ">call by value</a></li>
+<li><a href="c_reference.html" target="_parent" class=" ">call by reference</a></li>
+<li><a href="c_recursion.html" target="_parent" class=" ">recursion</a></li> 
+
+</details>
+</li>
+
+<li><details class="nav_det">
+<summary>Array</summary>
+<li><a href="c_1d.html " target="_parent" class="">1D array</a></li>
+<li><a href="c_2d.html" target="_parent" class="">2D array</a></li>
+
+</details>
+</li>
+
+<li><a href="c_pointer.html" target="_parent" class=" ">Pointers</a></li>
+<li><a href="c_string.html" target="_parent" class=" ">Strings</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn">
+<tr> 
+<th style="font-size:35px;  text-decoration:underline; padding:20px 0px  20px  160px;">Strings</th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td>
+</tr>
+
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.What would be the output of the following program ?</td> 
+</tr>
+
+
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    printf(5+"Good Morning\n");
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">Good Morning</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb">Good </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc"> M</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond"> Morning</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optiond','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br>printf(5+"Good Morning\n"); It skips the 5 characters and prints the given string.
+
+Hence the output is "Morning" </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.What would be the output of the following program ?</td> 
+</tr>
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    void fun();
+    fun();
+    printf("\n");
+    return 0;
+}
+void fun()
+{
+    char c;
+    if((c = getchar())!= '\n')
+        fun();
+    printf("%c", c);
+}
+
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">cba</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">infinite loop</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc">bca</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">abc abc</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optiona','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option A is the correct answer.<br>The function fun() gets a character input and the input is terminated by an enter key(New line character). It prints the given character in the reverse order.
+
+The given input characters are "abc"
+<br>
+Output: cba</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    char *names[] = { "Suresh", "Siva", "Sona", "Baiju", "Ritu"};
+    int i;
+    char *t;
+    t = names[3];
+    names[3] = names[4];
+    names[4] = t;
+    for(i=0; i<=4; i++)
+        printf("%s,", names[i]);
+    return 0;
+}
+</pre>
+
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb">Suresh, Siva, Sona, Baiju, Ritu</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">Suresh, Siva, Sona, Ritu, Baiju</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">Suresh, Siva, Baiju, Sona, Ritu</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond">Suresh, Siva, Ritu, Sona, Baiju</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optionb','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>
+
+
+Step 1: char *names[] = { "Suresh", "Siva", "Sona", "Baiju", "Ritu"}; 
+The variable names is declared as an pointer to a array of strings.<br>
+Step 2: int i; The variable i is declared as an integer type.<br>
+
+Step 3: char *t; The variable t is declared as pointer to a string.<br>
+
+Step 4: t = names[3]; names[3] = names[4]; names[4] = t; 
+These statements the swaps the 4 and 5 element of the array names.<br>
+
+Step 5: for(i=0; i<=4; i++) printf("%s,", names[i]); These statement prints the all the value of the array names.<br>
+
+Hence the output of the program is "Suresh, Siva, Sona, Ritu, Baiju".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.what would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+
+int main()
+{
+    static char str1[] = "dills";
+    static char str2[20];
+    static char str3[] = "Daffo";
+    int i;
+    i = strcmp(strcat(str3, strcpy(str2, str1)), "Daffodills");
+    printf("%d\n", i);
+    return 0;
+}
+A.	0
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optiona">0</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">1</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">2</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">4</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optiona','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>strcpy(str2,str1) : here "dills" will be copied to str2.
+Hence str2 contains " dills"
+
+strcat(str3,str2) : "dills" will be concatenated with "daffo"
+Hence str3 contains " Daffodills ".
+
+At last strcmp compares with the string str3 with "Daffodills" and pass the value "0" since the string matches.
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.How will you print \n on the screen?</td> 
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optiona">printf("\n");.</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">echo "\\n";</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">printf('\n');
+</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond">printf("\\n"); </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optiond','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br>he statement printf("\\n"); prints '\n' on the screen.</p> </details>
+
+<hr> 
+
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

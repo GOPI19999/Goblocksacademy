@@ -1,0 +1,122 @@
+
+div.header
+{
+   width:100% ; 
+   height :140px; 
+   text-align:center; 
+   vertical-align:middle;
+   color:#00ff66;
+   font-family:audiowide,sans-serif; 
+   background-color:#00172D;
+   font-size:50px;   
+   position:fixed; 
+   top:0;   
+   
+   
+
+}     
+
+
+div.header ul li.com 
+{ 
+  
+  list-style-type:none; 
+  font-family:audiowide,sans-serif; 
+  
+
+}
+
+
+
+
+ 
+
+ul.nav_side 
+{
+  
+  margin:5px 0px 5px 0px; 
+  padding-left:0px;
+  position: fixed; 
+  
+
+}
+
+ul.nav_side li,ul.nav_side li a
+{  
+  
+  text-align:center;
+  text-decoration:none;
+  font-size:20px; 
+  color:white; 
+  background-color:#00172D;  
+  width:200px;
+  padding:7px 5px 10px ; 
+ 
+  
+  
+  
+} 
+
+ summary
+{
+
+  list-style:none;
+  
+} 
+
+ul.nav_side li a:hover:not(.home),ul.nav_side li summary:hover:not(.home)
+{  
+  
+  
+  color:black;
+  background-color:#00ff66; 
+  
+
+}
+
+div.mcq 
+{
+  margin-left:300px;
+  margin-top:140px; 
+  font-size:20px;
+  padding:1px;
+    
+
+
+}  
+
+
+button,details.exp summary 
+{
+
+  color:white;  
+  padding: 12px 25px; 
+  font-weight:bold;
+  text-align:center; 
+  font-size:20px; 
+  background-color:#000220;
+  border:none;
+  
+
+}
+
+details.exp 
+{
+
+   display:inline;
+}
+
+details p 
+{
+
+  background-color:white; 
+  color:#00172D;
+
+}
+
+
+table.qn 
+{
+
+  margin-top:30px;
+}

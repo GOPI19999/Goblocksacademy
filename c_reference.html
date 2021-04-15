@@ -1,0 +1,502 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> C Reference</title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="c_pro_mcq.html" target="_parent" class=" ">  Variables</a></li>
+<li><a href="c_control_flow.html" target="_parent" class=" "> Control flow </a></li>
+<li><a href="c_expressions.html" target="_parent" class=" "> Expressions </a></li>
+
+<li><details class="nav_det">
+<summary>Functions</summary>
+<li><a href="c_value.html" target="_parent" class=" ">call by value</a></li>
+<li><a href="c_reference.html" target="_parent" class=" ">call by reference</a></li>
+<li><a href="c_recursion.html" target="_parent" class=" ">recursion</a></li> 
+
+</details>
+</li>
+
+<li><details class="nav_det">
+<summary>Array</summary>
+<li><a href="c_1d.html " target="_parent" class="">1D array</a></li>
+<li><a href="c_2d.html" target="_parent" class="">2D array</a></li>
+
+</details>
+</li>
+
+<li><a href="c_pointer.html" target="_parent" class=" ">Pointers</a></li>
+<li><a href="c_string.html" target="_parent" class=" ">Strings</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn">
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 0px  20px  280px;">Call by Reference</th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  0px 0px;">Choose the best answer :</td> 
+</tr>
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >1.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+void fun(int*, int*);
+int main()
+{
+    int i=5, j=2;
+    fun(&i, &j);
+    printf("%d, %d", i, j);
+    return 0;
+}
+void fun(int *i, int *j)
+{
+    *i = *i**i;
+    *j = *j**j;
+}
+
+</pre>
+
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">10,4</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb">2,5</label></td> 
+
+ </tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc">25,4</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">5,2</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optionc','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>
+
+
+
+
+
+<br>Step 1: int i=5, j=2; Here variable i and j are declared as an integer type and initialized to 5 and 2 respectively.
+
+<br>Step 2: fun(&i, &j); Here the function fun() is called with two parameters &i and &j (The & denotes call by reference. So the address of the variable i and j are passed. )
+
+<br>Step 3: void fun(int *i, int *j) This function is called by reference, so we have to use * before the parameters.
+
+<br>Step 4: *i = *i**i; Here *i denotes the value of the variable i. We are multiplying 5*5 and storing the result 25 in same variable i.
+
+<br>Step 5: *j = *j**j; Here *j denotes the value of the variable j. We are multiplying 2*2 and storing the result 4 in same variable j.
+
+<br>Step 6: Then the function void fun(int *i, int *j) return back the control back to main() function.
+
+<br>Step 7: printf("%d, %d", i, j); It prints the value of variable i and j.
+
+Hence the output is 25, 4.
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.what would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    void fun(char*);
+    char a[100];
+    a[0] = 'A'; a[1] = 'B';
+    a[2] = 'C'; a[3] = 'D';
+    fun(&a[0]);
+    return 0;
+}
+void fun(char *a)
+{
+    a++;
+    printf("%c", *a);
+    a++;
+    printf("%c", *a);
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optionb">AB</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">BC</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc">CD</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">No Output</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optionb','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>
+Here we pass the array in function. We pass the base address of the base array which is zero. a[0]=A, a[1]=B, a[2]=C, a[3]=D.
+
+Now a++ it means increment the address of the address 1 which store the value is B. In same a++ it will be 2, which print C.
+</p> </details>
+
+<hr> 
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+int check (int, int);
+
+int main()
+{
+    int c;
+    c = check(10, 20);
+    printf("c=%d\n", c);
+    return 0;
+}
+int check(int i, int j)
+{
+    int *p, *q;
+    p=&i;
+    q=&j;
+    i>=45 ? return(*p): return(*q);
+}
+
+</pre>
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optiona">Print 10</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">Print 20</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">Print 1
+</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond">Compile error</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optiond','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br>There is an error in this line i>=45 ? return(*p): return(*q);. We cannot use return keyword in the terenary operators.</p> </details>
+<hr> 
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+int fun(int(*)());
+
+int main()
+{
+    fun(main);
+    printf("Hi\n");
+    return 0;
+}
+int fun(int (*p)())
+{
+    printf("Hello ");
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optiona">Infinite loop</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">Hello Hi</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc"> Hi</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">Error</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optionb','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p>Option B is the correct answer.<br>
+Yes it is a function pointer....fun(main) sends a copy of main() function to p and it becomes the argument of fun().
+it prints hello then return the control to the calling fuction ...Then it prints Hi.
+
+</p> </details>
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.What will be the output of the program ? if int takes 2 bytes </td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+
+#include&lt;stdio.h&gt;
+void fun(char**);
+
+int main()
+{
+    char *argv[] = {"ab", "cd", "ef", "gh"};
+    fun(argv);
+    return 0;
+}
+void fun(char **p)
+{
+    char *t;
+    t = (p+= sizeof(int))[-1];
+    printf("%s\n", t);
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optiona">ab</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q7optionb" name="q5"><label for="q5optionb">cd</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">ef</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond">gh</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optionb','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p>Option B is the correct answer . Since C is a machine dependent language sizeof(int) may return different values.
+
+The output for the above program will be cd in Windows (Turbo C) and gh in Linux (GCC).It is t= (p+=sizeof(int)) [-1]; and it works like this.
+
+First, sizeof(int) is replaced by 2.
+Now, p is of char type so it's incremented by 2bytes during assigning p=p+2. Till this time it's pointing "ef" after this  "ef"[-1] = *(&"ef"-1) it will point "cd" after executing [-1]. That's all.</p> </details>
+<hr>
+
+
+
+
+
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

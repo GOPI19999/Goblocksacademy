@@ -1,0 +1,368 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> Boat  </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="apt_train.html" target="_parent" class=" "> Problems on train </a></li>
+<li><a href="apt_hcf_lcm.html" target="_parent" class=" ">HCF and LCM</a></li>
+<li><a href="apt_time.html" target="_parent" class=" "> Time and distance </a></li>
+
+
+<li><a href="apt_boats.html" target="_parent" class=" ">Boats and Stream</a></li>
+<li><a href="apt_age.html" target="_parent" class=" ">Problems on age</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+
+<table class="qn">
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 280px  20px 0px;">Boats and Stream </th> 
+</tr>
+<tr> 
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td> 
+</tr>
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.	
+A boat can travel with a speed of 13 km/hr in still water. If the speed of the stream is 4 km/hr, find the time taken by the boat to go 68 km downstream.	
+ 
+</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">2 hours </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb"> 3 hours  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc"> 4 hours  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond"> 5 hours </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optionc','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>Speed downstream = (13 + 4) km/hr = 17 km/hr.<br>
+
+Time taken to travel 68 km downstream =	 68/17 hrs = 4 hrs.
+
+
+ </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.	
+A man's speed with the current is 15 km/hr and the speed of the current is 2.5 km/hr. The man's speed against the current is:	
+</td> 
+</tr>
+
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">8.5 km/hr  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">9 km/hr  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc"> 12.5 km/hr  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond"> 10 km/hr </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optiond','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option D is the correct answer.<br>Man's rate in still water = (15 - 2.5) km/hr = 12.5 km/hr.
+
+Man's rate against the current = (12.5 - 2.5) km/hr = 10 km/hr.
+
+
+</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.	
+A boat running upstream takes 8 hours 48 minutes to cover a certain distance, while it takes 4 hours to cover the same distance running downstream. What is the ratio between the speed of the boat and speed of the water current respectively?</td> 
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb"> 2 : 1	</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">3 : 2  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">8 : 3 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond"> Cannot be determined  </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optionc','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br> 	
+
+Let the man's rate upstream be x kmph and that downstream be y kmph.
+
+Then, distance covered upstream in 8 hrs 48 min = Distance covered downstream in 4 hrs.
+
+(x *8*4)/5 = (y x 4)<br>
+ 
+(44/5)x =4y <br>
+y =(11/5)*x. <br>
+
+ Required ratio =(y + x)/2:(y - x)/2	<br>
+ =(16x/5) *x *1/2 : (6x/5)*x*1	<br>
+	
+   =(8/5) : (3/5)<br>
+   =8 : 3.
+
+</p>
+</details>
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.	
+A motorboat, whose speed in 15 km/hr in still water goes 30 km downstream and comes back in a total of 4 hours 30 minutes. The speed of the stream (in km/hr) is:
+
+</td> 
+</tr>
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb">4</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">5</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">6</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">10</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optionb','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br> 
+
+
+
+Let the speed of the stream be x km/hr. Then,
+
+Speed downstream = (15 + x) km/hr,
+
+Speed upstream = (15 - x) km/hr.
+
+30/(15 + x)	+	30/(15 - x)	= 4 * 1/2 <br>
+		
+	900/(225 - x<superscript>2</superscript>) = 9/2 <br>
+	
+ 9x<superscript>2</superscript> = 225
+
+ 
+
+ x = 5 km/hr.
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.	
+In one hour, a boat goes 11 km/hr along the stream and 5 km/hr against the stream. The speed of the boat in still water (in km/hr) is:</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">3 km/hr</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">5 km/hr</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc"> 8 km/hr</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond">9 km/hr </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optionc','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br> Speed in still water = (1/2)*(11 + 5) kmph = 8 kmph.
+
+</p> </details>
+<hr> 
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

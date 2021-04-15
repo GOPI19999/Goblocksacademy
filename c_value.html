@@ -1,0 +1,577 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> Call by reference </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="c_pro_mcq.html" target="_parent" class=" ">  Variables</a></li>
+<li><a href="c_control_flow.html" target="_parent" class=" "> Control flow </a></li>
+<li><a href="c_expressions.html" target="_parent" class=" "> Expressions </a></li>
+
+<li><details class="nav_det">
+<summary>Functions</summary>
+<li><a href="c_value.html" target="_parent" class=" ">call by value</a></li>
+<li><a href="c_reference.html" target="_parent" class=" ">call by reference</a></li>
+<li><a href="c_recursion.html" target="_parent" class=" ">recursion</a></li> 
+
+</details>
+</li>
+
+<li><details class="nav_det">
+<summary>Array</summary>
+<li><a href="c_1d.html " target="_parent" class="">1D array</a></li>
+<li><a href="c_2d.html" target="_parent" class="">2D array</a></li>
+
+</details>
+</li>
+
+<li><a href="c_pointer.html" target="_parent" class=" ">Pointers</a></li>
+<li><a href="c_string.html" target="_parent" class=" ">Strings</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn">
+
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 0px  20px  280px;">Call by Value</th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  0px 0px;">Choose the best answer :</td> 
+</tr>
+
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.What will be the output of the program ?</td> 
+</tr>
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    int fun();
+    int i;
+    i = fun();
+    printf("%d\n", i);
+    return 0;
+}
+
+int fun()
+{
+    _AX = 1990;
+}
+
+</pre>
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">Garbage value</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb">0 (Zero)</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc">No output </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">1990</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optiond','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br>Turbo C (Windows): The return value of the function is taken from the Accumulator _AX=1990.
+
+But it may not work as expected in GCC compiler (Linux). </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.What will be the output of the program ?</td> 
+</tr>
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+int i;
+int fun();
+
+int main()
+{
+    while(i)
+    {
+        fun();
+        main();
+    }
+    printf("Hello\n");
+    return 0;
+}
+
+int fun()
+{
+    printf("Hi");
+}
+
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">Hello</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">Hi Hello</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc">No output </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">None of above</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optiona','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option A is the correct answer.<br>i is the global variable so its default value is 0 . so while loop doesn't executes </p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    int fun(int);
+    int i = fun(10);
+    printf("%d\n", --i);
+    return 0;
+}
+
+int fun(int i)
+{
+   return (i++);
+}
+</pre>
+
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb"> 9</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb"> 11  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">  10 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond"> 8 </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optiona','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br> 10 is passed to the function and then functions returns 10 (post increment) in printf pre decrement so output is 9</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.what would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+{
+    int i=-3, j=2, k=0, m;
+    m = ++i || ++j && ++k;
+    printf("%d, %d, %d, %d\n", i, j, k, m);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb">2, 2, 0, 1</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">1, 2, 1, 0</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">-2, 2, 0, 0</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">-2, 2, 0, 1</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optiond','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br>m = ++i || ++j && ++k; here (++j && ++k;) this code will not get executed because ++i has non-zero value.
+becomes m = -2 || ++j && ++k;
+becomes m = TRUE || ++j && ++k; Hence this statement becomes TRUE. So it returns '1'(one). Hence m=1.</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+int main()
+{
+    int i=2;
+    int j = i + (1, 2, 3, 4, 5);
+    printf("%d\n", j);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">4</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">7</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">6</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond">5</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optionb','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>In this expression 5 is the right most operand,ecause, comma operator used in the expression i (1, 2, 3, 4, 5). 
+hence after evaluating expression (1, 2, 3, 4, 5) the result is 5, which on adding to i results into 7.
+</p> </details>
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >6.What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x=55;
+    printf("%d, %d, %d\n", x<=55, x=40, x>=10);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q6optiona" name="q6"><label for="q6optiona">1, 40, 1</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q6optionb" name="q6"><label for="q6optionb">1, 55, 1</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q6optionc" name="q6"><label for="q6optionc">1, 55, 0</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q6optiond" name="q6"><label for="q6optiond">1,1,1</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q6optiona','res6')" >check</button>
+<p id="res6"></p>
+
+<details class="exp"> <summary>Explanation</summary><p>In printf the execution of expressions is from Right to Left.
+here x>=10 returns TRUE hence it prints '1'.
+x=40 here x is assigned to 40 Hence it prints '40'.
+x<=55 returns TRUE. hence it prints '1'.</p> </details>
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >7.What will be the output of the program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+#include&lt;stdio.h&gt;
+int main()
+{
+    int x=4, y, z;
+    y = --x;
+    z = x--;
+    printf("%d, %d, %d\n", x, y, z);
+    return 0;
+}
+
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q7optiona" name="q7"><label for="q7optiona">4, 3, 3</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q7optionb" name="q7"><label for="q7optionb">4, 3, 2</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q7optionc" name="q6"><label for="q7optionc">3, 3, 2</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q7optiond" name="q7"><label for="q7optiond">2, 3, 3</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q7optiond','res7')" >check</button>
+<p id="res7"></p>
+
+<details class="exp"> <summary>Explanation</summary><p>y = --x; becomes y = 3; because (--x) is pre-decrement operator.
+ z = x--; becomes z = 3;. In the next step variable x becomes 2, because (x--) is post-decrement operator.
+Hence it prints "2, 3, 3".</p> </details>
+<hr>
+
+
+
+
+
+
+ </form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

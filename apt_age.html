@@ -1,0 +1,367 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> Age Problems  </title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="apt_train.html" target="_parent" class=" "> Problems on train </a></li>
+<li><a href="apt_hcf_lcm.html" target="_parent" class=" ">HCF and LCM</a></li>
+<li><a href="apt_time.html" target="_parent" class=" "> Time and distance </a></li>
+
+
+<li><a href="apt_boats.html" target="_parent" class=" ">Boats and Stream</a></li>
+<li><a href="apt_age.html" target="_parent" class=" ">Problems on age</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn"> 
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 280px  20px 0px;">Problems on Age </th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td> 
+</tr>
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1	
+The sum of ages of 5 children born at the intervals of 3 years each is 50 years. What is the age of the youngest child?.	
+ 
+</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona"> 4 years </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb">8 years   </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc"> 10 years  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">None of these </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optiona','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>Let the ages of children be x, (x + 3), (x + 6), (x + 9) and (x + 12) years.<br>
+
+Then, x + (x + 3) + (x + 6) + (x + 9) + (x + 12) = 50<br>
+
+ 5x = 20<br>
+
+ x = 4.<br>
+
+Age of the youngest child = x = 4 years.
+ </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.	
+A father said to his son, "I was as old as you are at the present at the time of your birth". If the father's age is 38 years now, the son's age five years back was:	
+</td> 
+</tr>
+
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">14 years  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb"> 19 years </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc"> 33 years  </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">39 years  </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optiona','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option A is the correct answer.<br>
+Let the son's present age be x years. Then, (38 - x) = x
+
+ 2x = 38.
+
+ x = 19.
+
+ Son's age 5 years back (19 - 5) = 14 years.
+
+</p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3	
+A is two years older than B who is twice as old as C. If the total of the ages of A, B and C be 27, then how old is B?.</td> 
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb"> 7	</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">  8</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">9 </label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond"> 10  </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optionc','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>  
+et C's age be x years. Then, B's age = 2x years. A's age = (2x + 2) years.
+
+ (2x + 2) + 2x + x = 27
+
+ 5x = 25
+
+ x = 5.
+
+Hence, B's age = 2x = 10 years. 
+</p> </details>
+<hr> 
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.Present ages of Sameer and Anand are in the ratio of 5 : 4 respectively. Three years hence, the ratio of their ages will become 11 : 9 respectively. What is Anand's present age in years?
+
+</td> 
+</tr>
+
+
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optionb">24</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">27</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">30</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">Cannot be determined</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optiona','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option A is the correct answer.<br>
+Let the present ages of Sameer and Anand be 5x years and 4x years respectively.
+
+Then,	(5x + 3)/4x + 3	= 11/9<br>
+	
+ 9(5x + 3) = 11(4x + 3)<br>
+
+ 45x + 27 = 44x + 33<br>
+
+ 45x - 44x = 33 - 27<br>
+
+ x = 6.<br>
+
+ Anand's present age = 4x = 24 years.</p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.A man is 24 years older than his son. In two years, his age will be twice the age of his son. The present age of his son is:</td> 
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">14 years</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">18 years</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">30 years</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond"> 22 years</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optiond','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option D is the correct answer.<br> Let the son's present age be x years. Then, man's present age = (x + 24) years.
+
+ (x + 24) + 2 = 2(x + 2)<br>
+
+ x + 26 = 2x + 4<br>
+
+ x = 22.</p> </details>
+<hr> 
+</form>
+</div>
+
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+

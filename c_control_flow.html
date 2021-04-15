@@ -1,0 +1,441 @@
+
+<!DOCTYPE html> 
+
+<html> 
+<head> 
+<title> C Control flow</title> 
+<link rel="stylesheet" href="css_header_project.css" >
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|trirong">
+
+<script> 
+
+function check(a,b) 
+{
+  
+  
+  
+ var x = document.getElementById(a).checked;
+
+ if(x==true) 
+ {
+     document.getElementById(b).innerHTML="You are Correct";
+ } 
+
+ else 
+ {
+   document.getElementById(b).innerHTML="You are wrong ..See Explanation";
+
+ }
+
+}
+
+</script>
+
+</head> 
+<body> 
+
+<div class="header"> 
+
+
+<ul >  
+<li class="com"><span style="font-size:55px;">G</span>oblocks <span style="font-size:50px;">A</span>cademy </li>
+</ul> 
+
+</div> 
+
+
+<ul class="nav_side" > 
+
+<li style="  border: 1px solid #00172D; 
+   
+ background-color:#00ff66; width:199px;">
+<a href="index.html" target="_parent" style="color:black; background-color:#00ff66; ">Home</a></li> 
+
+<li><a href="c_pro_mcq.html" target="_parent" class=" ">  Variables</a></li>
+<li><a href="c_control_flow.html" target="_parent" class=" "> Control flow </a></li>
+<li><a href="c_expressions.html" target="_parent" class=" "> Expressions </a></li>
+
+<li><details class="nav_det">
+<summary>Functions</summary>
+<li><a href="c_value.html" target="_parent" class=" ">call by value</a></li>
+<li><a href="c_reference.html" target="_parent" class=" ">call by reference</a></li>
+<li><a href="c_recursion.html" target="_parent" class=" ">recursion</a></li> 
+
+</details>
+</li>
+
+<li><details class="nav_det">
+<summary>Array</summary>
+<li><a href="c_1d.html " target="_parent" class="">1D array</a></li>
+<li><a href="c_2d.html" target="_parent" class="">2D array</a></li>
+
+</details>
+</li>
+
+<li><a href="c_pointer.html" target="_parent" class=" ">Pointers</a></li>
+<li><a href="c_string.html" target="_parent" class=" ">Strings</a></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+<div class="mcq">
+<form>
+<table  class="qn"> 
+<tr>
+<th style="font-size:35px;  text-decoration:underline; padding:20px 0px  20px  150px;">Control flow </th> 
+</tr>
+<tr>
+<td style="font-size:35px; font-weight:bold; text-decoration:underline; padding:20px 30px  20px 0px;">Choose the best answer :</td> 
+</tr>
+
+
+
+
+<tr> 
+<td style="font-weight:bold; font-size:25px;">1.What would be the output of the following program ?</td> 
+</tr>
+
+
+
+<tr> 
+<td> 
+<pre>
+int main() 
+{
+   int i=2; 
+   
+   switch(i) 
+  {
+
+
+    default: 
+       printf("Gopi"); 
+    case 1: 
+       printf("Nitya"); 
+    case 2: 
+       printf("Saranraj"); 
+    case 3:  
+       printf("Henry"); 
+ }
+   
+  
+}
+
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q1optiona" name="q1"><label for="q1optiona">Gopi</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q1optionb" name="q1"><label for="q1optionb">Nitya <br>&emsp;Saranraj<br>&emsp;Henry</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q1optionc" name="q1"><label for="q1optionc">Saranraj<br>&emsp;Henry</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q1optiond" name="q1"><label for="q1optiond">Saranraj<br>&emsp;Henry<br>&emsp;Gopi</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q1optionc','res1')" >check</button>
+<p id="res1"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br> </p> </details>
+<hr>
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >2.What would be the output of the following program ?</td> 
+</tr>
+<tr> 
+<td> 
+<pre>
+int main() 
+{
+   int i=10; 
+   while()
+  {
+
+
+     printf("%d",i++); 
+     if(i>15) 
+       break;
+
+  }
+
+}
+</pre>
+
+</td>
+</tr>
+
+
+<tr> 
+<td><input type="radio" value="a" id="q2optiona" name="q2"><label for="q2optiona">The condition in the while loop is must</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q2optionb" name="q2"><label for="q2optionb">There should be atleast semicolon in the while loop</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q2optionc" name="q2"><label for="q2optionc">while loop should be replaced by for loop</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q2optiond" name="q2"><label for="q2optiond">None of the above </label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q2optiona','res2')" >check</button>
+<p id="res2"></p>
+
+<details class="exp"> <summary>Explanation</summary><p> Option A is the correct answer.<br>The condition in the while loop is must. </p> </details>
+<hr> 
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >3.What would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+int main() 
+{
+  int i=2,j=3; 
+  switch(i) 
+  {
+  
+     case 1: 
+       printf("%d",1); 
+     case 2 : 
+        printf("%d",2);
+     case j : 
+        printf("%d",j);
+     default : 
+        printf("%d",i);
+
+  }
+}
+</pre>
+
+</td>
+</tr>
+<tr> 
+<td><input type="radio" value="a" id="q3optiona" name="q3"><label for="q3optionb">2</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q3optionb" name="q3"><label for="q3optionb">1</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q3optionc" name="q3"><label for="q3optionc">Error</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q3optiond" name="q3"><label for="q3optiond">3</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q3optionc','res3')" >check</button>
+<p id="res3"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option C is the correct answer.<br>Case label should be int constant .(identifier not allowed in case label but allowed  in switch condition eg switch(i) ).</p> </details>
+
+<hr
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >4.what would be the output of the following program ?</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+int main() 
+{
+   int i=2; 
+   
+   switch(i) 
+  {
+    printf("Dennis ritchie");   
+    case 1: 
+       printf("Nitya"); 
+       break;
+    case 2: 
+       printf("Saranraj");  
+       break;
+    case 3:  
+       printf("Henry");  
+       break; 
+    default: 
+       printf("Gopi");
+
+ }
+   
+  
+}
+
+</pre>
+
+</td>
+
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q4optiona" name="q4"><label for="q4optiona">Dennis ritchie<br>&emsp;Saranraj<br></label></td> 
+</tr> 
+
+<tr> 
+<td><input type="radio" value="b" id="q4optionb" name="q4"><label for="q4optionb">Saranraj<br></label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q4optionc" name="q4"><label for="q4optionc">Error,printf("Dennis ritchie"); is in outside the case.<br></label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q4optiond" name="q4"><label for="q4optiond">Dennis ritchie</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q4optionb','res4')" >check</button>
+<p id="res4"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>If any statement within switch and not under any case then compiler doesn't say error and it doesn't execute the statement ..There is no error.Irrespective of the i value the first printf never executes. </p> </details>
+
+<hr> 
+
+
+
+
+
+
+
+
+
+
+
+<table class="qn">
+<tr> 
+<td   style="font-weight:bold; font-size:25px;" >5.Consider the following two C lines</td> 
+</tr>
+
+<tr> 
+<td> 
+<pre>
+int var1;
+extern int var2;
+Which of the following statements is correct ?
+</pre>
+
+</td>
+</tr>
+
+<tr> 
+<td><input type="radio" value="a" id="q5optiona" name="q5"><label for="q5optionb">Both statements only declare variables, don't define them.</label></td> 
+
+</tr> 
+
+
+
+
+
+
+
+
+<tr> 
+<td><input type="radio" value="b" id="q5optionb" name="q5"><label for="q5optionb">First statement declares and defines var1, but second statement only declares var2</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="c" id="q5optionc" name="q5"><label for="q5optionc">Both statements declare define variables var1 and var2
+</label></td> 
+
+</tr> 
+
+<tr> 
+<td><input type="radio" value="d" id="q5optiond" name="q5"><label for="q5optiond">None of the above</label></td> 
+
+</tr> 
+
+</table>
+
+<br>
+<button type="button" onclick="check('q5optionb','res5')" >check</button>
+<p id="res5"></p>
+
+<details class="exp"> <summary>Explanation</summary><p >Option B is the correct answer.<br>First one is the normal variable . But seconds defines only declaration and its definition may be in another file</p> </details>
+
+<hr> 
+
+
+
+
+</form>
+</div>
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
+
+
+
+
